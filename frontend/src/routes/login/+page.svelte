@@ -21,6 +21,7 @@
                     <div class="form-group mb-3">
                         <!-- svelte-ignore a11y-label-has-associated-control -->
                         <label class="mb-1 fw-bold" for="email">Email</label>
+                        <!-- svelte-ignore a11y-autofocus -->
                         <input
                             type="email"
                             name="email"
