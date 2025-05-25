@@ -1,3 +1,7 @@
+<script>
+    import "bootstrap/dist/css/bootstrap.min.css";
+</script>
+
 <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
     <div class="container">
         <a href="/" class="navbar-brand">Home</a>

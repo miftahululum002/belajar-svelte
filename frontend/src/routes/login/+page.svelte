@@ -15,12 +15,12 @@
     <div class="col-md-4">
         <div class="card border-0 rounded shadow-sm">
             <div class="card-body">
-                <h4>LOGIN</h4>
+                <h4>Login</h4>
                 <hr />
                 <form method="POST" action="?/login" use:enhance>
                     <div class="form-group mb-3">
                         <!-- svelte-ignore a11y-label-has-associated-control -->
-                        <label class="mb-1 fw-bold">Email address</label>
+                        <label class="mb-1 fw-bold" for="email">Email</label>
                         <input
                             type="email"
                             name="email"
@@ -29,7 +29,9 @@
                             )
                                 ? 'is-invalid'
                                 : ''}"
-                            placeholder="Email Address"
+                            placeholder="Email"
+                            id="email"
+                            autofocus
                             value={form?.values?.email || ""}
                         />
                         {#if form?.errors?.some((e) => e.path === "email")}
@@ -42,7 +44,9 @@
 
                     <div class="form-group mb-3">
                         <!-- svelte-ignore a11y-label-has-associated-control -->
-                        <label class="mb-1 fw-bold">Password</label>
+                        <label class="mb-1 fw-bold" for="password"
+                            >Password</label
+                        >
                         <input
                             type="password"
                             name="password"
@@ -51,6 +55,7 @@
                             )
                                 ? 'is-invalid'
                                 : ''}"
+                            id="password"
                             placeholder="Password"
                         />
                         {#if form?.errors?.some((e) => e.path === "password")}
@@ -62,7 +67,7 @@
                     </div>
 
                     <button type="submit" class="btn btn-primary w-100"
-                        >LOGIN</button
+                        >Login</button
                     >
                 </form>
             </div>
